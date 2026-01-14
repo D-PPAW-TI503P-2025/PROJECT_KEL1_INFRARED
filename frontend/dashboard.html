@@ -100,7 +100,15 @@
             loadUsers();
         }
 
+        if (getUserRole() === 'admin') {
+            document.getElementById('adminSection').classList.remove('hidden');
+            loadUsers();
+        }
+
         document.getElementById('addUserForm').addEventListener('submit', handleAddUser);
+
+        // Realtime Update (Every 5 seconds)
+        setInterval(loadChartData, 5000);
     </script>
 </body>
 
