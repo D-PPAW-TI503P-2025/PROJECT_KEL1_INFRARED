@@ -21,7 +21,7 @@ router.get('/busy-hours', (req, res) => {
             strftime('%H', created_at) as hour, 
             COUNT(*) as detection_count 
         FROM sensor_logs 
-        WHERE value = 0 
+        WHERE value = 1 
         GROUP BY hour 
         ORDER BY hour ASC
     `;

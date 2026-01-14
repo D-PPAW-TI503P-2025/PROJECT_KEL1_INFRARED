@@ -40,12 +40,12 @@ parser.on('data', (data) => {
     if (match) {
         const value = parseInt(match[1]);
         if (!isNaN(value)) {
-            // Arduino sends 0 when Object Detected (Active Low)
-            if (value === 0) {
-                console.log(`Object Detected! (Value 0) -> Sending to Database`);
+            // User confirmed: Value 1 = Detected (Buzzer ON)
+            if (value === 1) {
+                console.log(`Object Detected! (Value 1) -> Sending to Database`);
                 sendToApi(value);
             } else {
-                // Value 1 means "No Object"
+                // Value 0 means "No Object"
                 console.log(`No Object (Value ${value}) - Ignored`);
             }
         }
