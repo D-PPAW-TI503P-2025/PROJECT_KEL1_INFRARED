@@ -40,7 +40,7 @@ parser.on('data', (data) => {
     if (match) {
         const value = parseInt(match[1]);
         if (!isNaN(value)) {
-            // User confirmed: Value 1 = Detected (Buzzer ON)
+            // User confirmed: Value 1 = Detected (IR Sensor Active High logic observed)
             if (value === 1) {
                 console.log(`Object Detected! (Value 1) -> Sending to Database`);
                 sendToApi(value);
