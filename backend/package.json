@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
+<<<<<<< HEAD
     "start": "node src/server.js",
     "dev": "node --watch src/server.js"
   },
@@ -15,5 +16,35 @@
     "jsonwebtoken": "^9.0.3",
     "serialport": "^13.0.0",
     "sqlite3": "^5.1.7"
+=======
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js"
+  },
+  "dependencies": {
+    "@serialport/parser-readline": "^13.0.0",
+    "axios": "^1.13.2",
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.1",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.9.2",
+    "sequelize": "^6.37.1",
+    "serialport": "^13.0.0",
+    "ws": "^8.19.0"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.5",
+    "@types/node": "^20.11.30",
+    "@types/ws": "^8.18.1",
+    "concurrently": "^9.2.1",
+    "ts-node-dev": "^2.0.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.4.2"
+>>>>>>> 73a2f18 (init)
   }
 }
